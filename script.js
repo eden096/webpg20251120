@@ -2,15 +2,17 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = document.getElementById('nameInput');
     const submitBtn = document.getElementById('submitBtn');
     const resultDiv = document.getElementById('result');
-    const body = document.body; // Get the body element
+    const body = document.body;
 
-    // Add mouseenter and mouseleave event listeners to the body
-    body.addEventListener('mouseenter', () => {
-        body.classList.add('hover-effect');
-    });
+    // Add mousemove event listener to the body
+    body.addEventListener('mousemove', (e) => {
+        const x = e.clientX;
+        const y = e.clientY;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
 
-    body.addEventListener('mouseleave', () => {
-        body.classList.remove('hover-effect');
+        // Create a radial gradient that follows the mouse
+        body.style.background = `radial-gradient(circle at ${x}px ${y}px, #333 0%, #121212 25%)`;
     });
 
     submitBtn.addEventListener('click', () => {

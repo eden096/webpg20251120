@@ -6,17 +6,14 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease; /* Add transition for smooth effect */
-}
-
-body.hover-effect {
-    background-color: #e0e0e0; /* Slightly darker shade on hover */
+    background-color: #121212; /* Darker background */
+    color: #fff; /* White text for better contrast */
 }
 
 h1 {
-    color: #333;
+    color: #fff;
 }
+
 
 input[type="text"] {
     padding: 10px;
